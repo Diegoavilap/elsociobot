@@ -17,6 +17,9 @@ Set the token on your system for the bot:
 ``` sh
 # On Unix systems
 export TELEGRAM_TOKEN='PUT-YOUR-TOKEN-HERE'
+
+# On Windows systems
+SET TELEGRAM_TOKEN='PUT-YOUR-TOKEN-HERE'
 ```
 
 ## Usage
