@@ -4,7 +4,7 @@
 
 # importing Telegram libs and classes
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-import logging, os
+import logging, os, json, random
 
 token = os.environ['TELEGRAM_TOKEN']
 
@@ -18,19 +18,40 @@ logger = logging.getLogger(__name__)
   Define a few command handlers. These usually take the two arguments bot and
   update. Error handlers also receive the raised TelegramError object in error.
 """
+
+def knowledgeMA(t, who):
+    # open the json file with custom messages
+    with open('knowledge/data.json') as data_file:
+        data = json.load(data_file)
+
+    # check how many data on specific category
+    # we set -1 because we need this number
+    # to get data from array, and positions start
+    # from 0, not 1
+    count = len(data[t][who]) - 1
+    # select a random number to later select a message
+    r = random.randint(0, count)
+    # return the random message from json
+    return data[t][who][r]
+
 # Let "El Socio" know who you want him to give a "madrazo"
 def madrear(bot, update, args):
     try:
-        # return the name of the person
+        # let's keep the name for the message
+        real_name = args[0]
+        # check which madrazo we need to send
         person = args[0]
-        # This is not working right now, need to check if is a valid string
-        if not person:
-            update.message.reply_text('Escriba bien maricon')
-            return
+        if person == 'oscar' | person = 'Oscar' | person = 'ozkar':
+            person = 'oscar'
+        elif person == 'reina' | person = 'Reina' | person = 'edwin':
+            person = 'reina'
+        else:
+            person = 'general'
 
-        # Sending a madrazo
-        madrazo = "%s %s" % ('Callese hpta', person)
-        bot.send_message(chat_id=update.message.chat_id, text=madrazo)
+        # Request a madrazo for someone
+        kn = knowledgeMA('madrazos', person)
+        # Send random madrazo
+        bot.send_message(chat_id=update.message.chat_id, text=kn.format(user_name=real_name))
     except (IndexError, ValueError):
         # When you set nothing with /madrear
         update.message.reply_text('Uso: /madrear <nombre del pirobo>')

@@ -1,0 +1,35 @@
+{
+  "madrazos": {
+    "oscar": [
+      "{user_name} pedazo de metal",
+      "{user_name}, no eres un Robot programado para futbol"
+    ],
+    "reina": [
+      "teratetrahp {user_name}, con todo respeto taxista hp",
+      "{user_name} gordo hpta"
+    ],
+    "general": [
+      "{user_name}, callese hpta",
+      "Deje de ser tan estupido {user_name}",
+      "Para ese perro hpta de {user_name} me sobran madrazos",
+      "{user_name}, bobo hpta",
+      "{user_name} deje la gran malparida envidia"
+    ]
+  },
+  "agradecimientos": [
+    "Gracias {user_name} sapo tera catre hpta",
+    "Gracias {user_name} por almenos meterme en el grupo"
+  ],
+  "planes": [
+    "farra en la oficina de Jhoan",
+    "Vamos a la casa de Eddy y que nos reciba con arepas",
+    "cuando quieran los atiendo en Karts",
+    "darnos bala en paintball",
+    "vamos a que la guerrilla nos de bala mientras jugamos xbox"
+  ],
+  "excusas": [
+    "No me perdí en Bogota, yo camine 7 horas porque quise",
+    "Tuve que buscar un mecanico el Domingo a las 6am para cambiar el kit de arrastre de la moto",
+    "No es la flecha, es el indio"
+  ]
+}
