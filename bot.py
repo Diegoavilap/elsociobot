@@ -35,6 +35,16 @@ def madrear(bot, update, args):
         # When you set nothing with /madrear
         update.message.reply_text('Uso: /madrear <nombre del pirobo>')
 
+# "El Socio" will give you a mapto his house
+def micasa(bot, update):
+    try:
+        bot.send_message(chat_id=update.message.chat_id, text="Hogar de dioses")
+        # Caney, of course ;)
+        bot.send_location(chat_id=update.message.chat_id, latitude=3.29057260799024, longitude=-75.0142164941721)
+    except (IndexError, ValueError):
+        # In case something went wrong
+        update.message.reply_text('Uso: /micasa')
+
 # This is what you get when try to talk with El Socio in private.
 def nonCommandAnsw(bot, update):
     update.message.reply_text("Abrase pues, o es que le quedé gustando.")
@@ -53,6 +63,7 @@ def main():
 
     # on different commands - answer in Telegram
     dp.add_handler(CommandHandler("madrear", madrear, pass_args=True))
+    dp.add_handler(CommandHandler("micasa", micasa))
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, nonCommandAnsw))
