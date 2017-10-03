@@ -29,7 +29,8 @@ def madrear(bot, update, args):
             return
 
         # Sending a madrazo
-        update.message.reply_text("%s %s" % ('Callese hpta', person))
+        madrazo = "%s %s" % ('Callese hpta', person)
+        bot.send_message(chat_id=update.message.chat_id, text=madrazo)
     except (IndexError, ValueError):
         # When you set nothing with /madrear
         update.message.reply_text('Uso: /madrear <nombre del pirobo>')
