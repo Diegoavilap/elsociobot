@@ -122,8 +122,8 @@ def agradecer(bot, update, args):
         bot.send_message(chat_id=update.message.chat_id,
                          text=kn.format(user_name=real_name))
     except (IndexError, ValueError):
-        # When you set nothing with /madrear
-        update.message.reply_text('Uso: /madrear <nombre del pirobo>')
+        # When you set nothing with /agradecer
+        update.message.reply_text('Uso: /agradecer <nombre del pirobo>')
 
 def ayuda(bot, update):
     # A message when you don't know how to use it
