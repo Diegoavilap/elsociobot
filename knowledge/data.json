@@ -19,7 +19,8 @@
   "agradecimientos": [
     "Gracias {user_name} sapo tera catre hpta",
     "Gracias {user_name} por almenos meterme en el grupo",
-    "Eddy, bendigame a {user_name} por favor"
+    "Eddy, bendigame a {user_name} por favor",
+    "Gracias {user_name} por sapo"
   ],
   "planes": [
     "farra en la oficina de Jhoan",
@@ -28,11 +29,14 @@
     "darnos bala en paintball",
     "vamos a que la guerrilla nos de bala mientras jugamos xbox",
     "piscina en la casa quinta de Reina",
-    "Rodada por Colombia"
+    "Rodada por Colombia",
+    "Vamos pa' la casa de Giovanny, su mamá siempre nos da comida :)"
   ],
   "excusas": [
     "No me perdí en Bogota, yo camine 7 horas porque quise",
     "Tuve que buscar un mecanico el Domingo a las 6am para cambiar el kit de arrastre de la moto",
-    "No es la flecha, es el indio"
+    "No es la flecha, es el indio",
+    "No le quería pegar, es que me descaché",
+    "No es que tenga que ir a lavarle los platos a Ana, es que tengo una reunión"
   ]
 }
