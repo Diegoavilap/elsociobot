@@ -62,6 +62,12 @@ def madrear(bot, update, args):
             person = 'oscar'
         elif person == 'reina' or person == 'Reina' or person == 'edwin':
             person = 'reina'
+        elif person == 'eddy' or person == 'Eddy':
+            person = 'eddy'
+        elif person == 'diego' or person == 'Diego' or person == 'Dieguito':
+            person = 'diego'
+        elif person == 'juan david' or person == 'Juan David' or person == 'ojitos':
+            person = 'juand'
         else:
             person = 'general'
 
