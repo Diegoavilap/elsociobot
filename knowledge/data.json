@@ -2,7 +2,14 @@
   "madrazos": {
     "oscar": [
       "{user_name} pedazo de metal",
-      "{user_name}, no eres un Robot programado para futbol"
+      "{user_name} pedazo de lata",
+      "{user_name}, no eres un Robot programado para futbol",
+      "Sopla condones chupan penes, y si {user_name} es para ti maricon de mierda",
+      "{user_name} es una zorra pone nalga",
+      "Que pasa {user_name} tripode de pipis",
+      "{user_name}, yo no le tengo miedo pedazo de oxido",
+      "{user_name} es más lento que caracol artrítico",
+      "{user_name} es más lento que alkazeltzer en kumis",
     ],
     "reina": [
       "teratetrahp {user_name}, con todo respeto taxista hp",
@@ -13,14 +20,33 @@
       "Deje de ser tan estupido {user_name}",
       "Para ese perro hpta de {user_name} me sobran madrazos",
       "{user_name}, bobo hpta",
-      "{user_name} deje la gran malparida envidia"
+      "{user_name} deje la gran malparida envidia",
+      "No me metamos más con {user_name}, por que peligra mi vida",
+      "{user_name} es severa loca",
+      "Se está buscando que lo saquen del grupo setenta hpta {user_name}"
+    ],
+    "diego": [
+      "Cuidado {user_name} confunde el chocolate con los dedos jajajaja",
+      "Ojo con {user_name}, esto se está poniendo oscuro",
+      "No me hable de ese hpta de {user_name}, ya tenemos suficiente con días negros, mercados negros, con ovejas negras para que esté otro negro",
+      "No me ensucie {user_name} negro pirobo",
+      "{user_name}!, cuál {user_name}? Es que ese hpta de noche se hace trasparente"
+    ],
+    "eddy": [
+      "{user_name} es mas blanco que culo de monja",
+      "{user_name} es mas blanco que axila de lagartija",
+      "Ese hpta de {user_name} es más hambriento que piojo en peluca"
+    ],
+    "juand": [
+      "Ese {user_name} es más cagado que chimbo de cacorro"
     ]
   },
   "agradecimientos": [
     "Gracias {user_name} sapo tera catre hpta",
     "Gracias {user_name} por almenos meterme en el grupo",
     "Eddy, bendigame a {user_name} por favor",
-    "Gracias {user_name} por sapo"
+    "Gracias {user_name} por sapo",
+    "{user_name}, gracias amiguito"
   ],
   "planes": [
     "farra en la oficina de Jhoan",
