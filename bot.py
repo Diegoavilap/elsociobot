@@ -64,7 +64,7 @@ def madrear(bot, update, args):
             person = 'reina'
         elif person == 'eddy' or person == 'Eddy':
             person = 'eddy'
-        elif person == 'diego' or person == 'Diego' or person == 'Dieguito':
+        elif person == 'diego' or person == 'Diego' or person == 'Dieguito' or person == 'dieguito':
             person = 'diego'
         elif person == 'juan david' or person == 'Juan David' or person == 'ojitos':
             person = 'juand'
