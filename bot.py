@@ -86,6 +86,25 @@ def mihouse(bot, update):
         # In case something went wrong
         update.message.reply_text('Uso: /micasa')
 
+# "El socio" will give you a photo or gif about The finger expression
+def pistola(bot, update):
+    try:
+        # Request a 'The Finger expression image or gif' from json
+        kn = knowledgeG('pistolas')
+
+        if (kn == 'gatito'):
+            # open the image with The Finger expression
+            image = open('knowledge/pistola/images/gatito.jpg','rb')
+            #send a image
+            bot.sendPhoto(chat_id=update.message.chat_id,
+                          photo=image)
+        else:
+            #send a gif
+            bot.sendVideo(chat_id=update.message.chat_id,
+                          video=kn)
+    except(IndexError, ValueError):
+        # In case something went wrong
+        update.message.reply_text('Uso: /pistola')
 # "El Socio" will give you a suggestion for a plan
 def planear(bot, update):
     try:
@@ -162,6 +181,7 @@ def main():
     dp.add_handler(CommandHandler("madrear", madrear, pass_args=True))
     dp.add_handler(CommandHandler("mihouse", mihouse))
     dp.add_handler(CommandHandler("planear", planear))
+    dp.add_handler(CommandHandler("pistola", pistola))
     dp.add_handler(CommandHandler("agradecer", agradecer, pass_args=True))
     dp.add_handler(CommandHandler("excusas", excusas))
     dp.add_handler(CommandHandler("ayuda", ayuda))

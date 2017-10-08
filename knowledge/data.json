@@ -23,20 +23,30 @@
     "Gracias {user_name} por sapo"
   ],
   "planes": [
-    "farra en la oficina de Jhoan",
+    "Farra en la oficina de Jhoan",
     "Vamos a la casa de Eddy y que nos reciba con arepas",
-    "cuando quieran los atiendo en Karts",
-    "darnos bala en paintball",
-    "vamos a que la guerrilla nos de bala mientras jugamos xbox",
-    "piscina en la casa quinta de Reina",
+    "Cuando quieran los atiendo en Karts",
+    "Darnos bala en paintball",
+    "Vamos a que la guerrilla nos de bala mientras jugamos xbox",
+    "Piscina en la casa quinta de Reina",
     "Rodada por Colombia",
-    "Vamos pa' la casa de Giovanny, su mamá siempre nos da comida :)"
+    "Vamos pa' la casa de Giovanny, su mamá siempre nos da comida :)",
+    "Vamos para Psicilago con el descuento que tiene Jhoan"
+  ],
+  "pistolas":[
+    "https://media.giphy.com/media/QGzPdYCcBbbZm/giphy.gif",
+    "https://m.popkey.co/da4ec7/Lmjd8.gif",
+    "https://media.giphy.com/media/bOifD9wkVMRxu/giphy.gif",
+    "http://3.bp.blogspot.com/-59uWAN0U2xw/U9BwK6mmnmI/AAAAAAAAUfk/29Jpk-li4GE/s1600/sacando+un+fuck+you+del+bolsillo+-+gif.gif",
+    "https://m.popkey.co/54711b/erqle.gif",
+    "https://m.popkey.co/9ad6cb/b0gv9.gif",
+    "gatito"
   ],
   "excusas": [
     "No me perdí en Bogota, yo camine 7 horas porque quise",
     "Tuve que buscar un mecanico el Domingo a las 6am para cambiar el kit de arrastre de la moto",
     "No es la flecha, es el indio",
-    "No le quería pegar, es que me descaché",
+    "No le quería pegar con el balón, es que me descaché",
     "No es que tenga que ir a lavarle los platos a Ana, es que tengo una reunión"
   ]
 }
