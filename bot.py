@@ -5,10 +5,10 @@
 # importing Telegram libs and classes
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 from functools import wraps
-import logging, os, json, random
+import logging, os, json, random, time, sys
 
 token = os.environ['TELEGRAM_TOKEN']
-LIST_OF_ADMINS = [12345678, 87654321]
+LIST_OF_ADMINS = [2740760]
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -17,7 +17,7 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 """
-This decorator allows you to restrict the access of a handler to only the 
+This decorator allows you to restrict the access of a handler to only the
 user_ids specified in LIST_OF_ADMINS.
 
 Add a @restricted decorator on top of your handler declaration.
@@ -27,6 +27,8 @@ def restricted(func):
     def wrapped(bot, update, *args, **kwargs):
         user_id = update.effective_user.id
         if user_id not in LIST_OF_ADMINS:
+            bot.send_message(chat_id=update.message.chat_id,
+                             text="Yo solo recibo ordendes de mi patron")
             print("Unauthorized access denied for {}.".format(user_id))
             return
         return func(bot, update, *args, **kwargs)
@@ -68,6 +70,11 @@ def knowledgeM(t, who):
   Define a few command handlers. These usually take the two arguments bot and
   update. Error handlers also receive the raised TelegramError object in error.
 """
+@restricted
+def restart(bot, update):
+    bot.send_message(update.message.chat_id, "Bot is restarting...")
+    time.sleep(0.2)
+    os.execl(sys.executable, sys.executable, *sys.argv)
 
 # Let "El Socio" know who you want him to give a "madrazo"
 def madrear(bot, update, args):
@@ -210,6 +217,9 @@ def main():
     dp.add_handler(CommandHandler("agradecer", agradecer, pass_args=True))
     dp.add_handler(CommandHandler("excusas", excusas))
     dp.add_handler(CommandHandler("ayuda", ayuda))
+
+    # Commands for admin porpuses
+    dp.add_handler(CommandHandler("restart", restart))
 
     # on noncommand i.e message - echo the message on Telegram
     dp.add_handler(MessageHandler(Filters.text, nonCommandAnsw))
