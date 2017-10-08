@@ -4,9 +4,11 @@
 
 # importing Telegram libs and classes
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from functools import wraps
 import logging, os, json, random
 
 token = os.environ['TELEGRAM_TOKEN']
+LIST_OF_ADMINS = [12345678, 87654321]
 
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -15,9 +17,20 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 
 """
-  Define a few command handlers. These usually take the two arguments bot and
-  update. Error handlers also receive the raised TelegramError object in error.
+This decorator allows you to restrict the access of a handler to only the 
+user_ids specified in LIST_OF_ADMINS.
+
+Add a @restricted decorator on top of your handler declaration.
 """
+def restricted(func):
+    @wraps(func)
+    def wrapped(bot, update, *args, **kwargs):
+        user_id = update.effective_user.id
+        if user_id not in LIST_OF_ADMINS:
+            print("Unauthorized access denied for {}.".format(user_id))
+            return
+        return func(bot, update, *args, **kwargs)
+    return wrapped
 
 # This search for everything except madrazos
 def knowledgeG(t):
@@ -50,6 +63,11 @@ def knowledgeM(t, who):
     r = random.randint(0, count)
     # return the random message from json
     return data[t][who][r]
+
+"""
+  Define a few command handlers. These usually take the two arguments bot and
+  update. Error handlers also receive the raised TelegramError object in error.
+"""
 
 # Let "El Socio" know who you want him to give a "madrazo"
 def madrear(bot, update, args):
