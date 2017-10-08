@@ -159,6 +159,7 @@ def ayuda(bot, update):
     msg += "- Le propongo un plan: /planear \n"
     msg += "- Agradecerle parcero: /agradecer <nombre-a-bendecir> \n"
     msg += "- Le roto una excusa: /excusas \n"
+    msg += "- Le hago pistola: /pistola \n"
     msg += "- Explicarle de nuevo porque no entiende: /ayuda \n\n"
     msg += "Si le quedó claro papi? \n"
 
