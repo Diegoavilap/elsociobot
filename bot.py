@@ -145,7 +145,7 @@ def planear(bot, update):
         bot.send_message(chat_id=update.message.chat_id,
                          text=kn)
     except (IndexError, ValueError):
-        # When you get and error
+        # When you get an error
         update.message.reply_text('Uso: /planear')
 
 # "El Socio" will give you a suggestion for a 'excusa'
@@ -157,8 +157,19 @@ def excusas(bot, update):
         bot.send_message(chat_id=update.message.chat_id,
                          text=kn)
     except (IndexError, ValueError):
-        # When you get and error /excusas
+        # When you get an error /excusas
         update.message.reply_text('Uso: /excusas')
+
+# Tell "El Socio" what you want to pin
+def pinear(bot, update):
+    try:
+        # Send pin message
+        bot.pin_chat_message(chat_id=update.message.chat_id,
+                             message_id=update.message.message_id)
+        #print (update.message.text)
+    except (IndexError, ValueError):
+        # When you set nothing with /pinear
+        update.message.reply_text('Uso: /pinear <mensaje>')
 
 # Let "El Socio" know who you want him to give an "agradecimiento"
 def agradecer(bot, update, args):
@@ -194,10 +205,6 @@ def ayuda(bot, update):
                          user_name=update.message.from_user.first_name,
                          bot_name=bot.name))
 
-# This is what you get when try to talk with El Socio in private.
-def nonCommandAnsw(bot, update):
-    update.message.reply_text("Abrase pues, o es que le quedé gustando.")
-
 # for error logging
 def error(bot, update, error):
     logger.warn('Update "%s" caused error "%s"' % (update, error))
@@ -216,13 +223,11 @@ def main():
     dp.add_handler(CommandHandler("pistola", pistola))
     dp.add_handler(CommandHandler("agradecer", agradecer, pass_args=True))
     dp.add_handler(CommandHandler("excusas", excusas))
+    dp.add_handler(CommandHandler("pinear", pinear))
     dp.add_handler(CommandHandler("ayuda", ayuda))
 
     # Commands for admin porpuses
     dp.add_handler(CommandHandler("restart", restart))
-
-    # on noncommand i.e message - echo the message on Telegram
-    dp.add_handler(MessageHandler(Filters.text, nonCommandAnsw))
 
     # log all errors
     dp.add_error_handler(error)
